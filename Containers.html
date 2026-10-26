@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Container to see everything */
+  .container {
+    border: 3px solid black;
+    height: 800px;
+    padding: 20px;
+    position: relative; /* Important for absolute positioning */
+  }
+
+  /* 1. STATIC - Default (Normal kid) */
+  .static-box {
+    position: static;
+    background-color: lightblue;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  /* 2. RELATIVE - Wiggle a bit */
+  .relative-box {
+    position: relative;
+    top: 20px;    /* Move down 20px from normal spot */
+    left: 30px;   /* Move right 30px from normal spot */
+    background-color: lightgreen;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  /* 3. ABSOLUTE - Fly anywhere in container */
+  .absolute-box {
+    position: absolute;
+    top: 100px;   /* 100px from top of container */
+    right: 50px;  /* 50px from right of container */
+    background-color: lightcoral;
+    padding: 20px;
+  }
+
+  /* 4. FIXED - Stick to screen */
+  .fixed-box {
+    position: fixed;
+    bottom: 20px; /* 20px from bottom of screen */
+    right: 20px;  /* 20px from right of screen */
+    background-color: yellow;
+    padding: 20px;
+    border: 2px solid orange;
+  }
+
+  /* 5. STICKY - Magic! */
+  .sticky-box {
+    position: sticky;
+    top: 0;       /* Sticks when it reaches top */
+    background-color: plum;
+    padding: 20px;
+    margin: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>CSS Position Examples</h2>
+  
+  <!-- STATIC -->
+  <div class="static-box">
+    <strong>1. STATIC</strong><br>
+    I'm in my normal position. Nothing special!
+  </div>
+  
+  <!-- RELATIVE -->
+  <div class="relative-box">
+    <strong>2. RELATIVE</strong><br>
+    I moved 20px down and 30px right from where I would normally be!
+  </div>
+  
+  <!-- STATIC (to show space) -->
+  <div class="static-box">
+    <strong>STATIC again</strong><br>
+    I'm just here to show normal flow.
+  </div>
+  
+  <!-- STICKY -->
+  <div class="sticky-box">
+    <strong>5. STICKY</strong><br>
+    Scroll down and watch me stick to the top!
+  </div>
+  
+  <!-- ABSOLUTE -->
+  <div class="absolute-box">
+    <strong>3. ABSOLUTE</strong><br>
+    I flew to the top-right corner of the container!
+  </div>
+  
+  <!-- Add content to enable scrolling -->
+  <p>Scroll down to see sticky in action...</p>
+  <p>More content...</p>
+  <p>Keep scrolling...</p>
+  <p>The sticky box should stick to the top!</p>
+  <p>More content...</p>
+  <p>More content...</p>
+  <p>More content...</p>
+</div>
+
+<!-- FIXED -->
+<div class="fixed-box">
+  <strong>4. FIXED</strong><br>
+  I'm stuck to the bottom-right of your screen!<br>
+  Scroll and I stay here!
+</div>
+
+</body>
+</html>
